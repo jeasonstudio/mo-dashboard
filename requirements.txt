@@ -1,2 +1,5 @@
 numpy
 cPickle
+flask
+flask_restful
+requests
