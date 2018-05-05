@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./run.py" ]
+CMD [ "python ./setup.py install", "python ./run.py" ]
