@@ -38,7 +38,11 @@ class Sentiment(Resource):
 
     result = { 'polar': 0, 'confd': 0, 'sentiment': 0 }
     result['sentiment'] = xm.sentiment()
-    result['polar'] = data['polar']
+    if data['polar'] == 0:
+      result['polar'] = 1
+    else:
+      result['polar'] = data['polar']
+    # result['polar'] = data['polar'] if data['polar'] == 0 else 1
     result['confd'] = data['confd']
     return jsonify(result)
 
